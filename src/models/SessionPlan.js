@@ -10,7 +10,7 @@ export class SessionPlan {
         this.syncStatus = 'saved_locally'; 
         this.createdAt = new Date().toISOString();
         
-        st
+    
         this.pupilNames = undefined; 
         this.pupilProfiles = undefined;
     }
