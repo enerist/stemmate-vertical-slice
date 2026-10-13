@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEMMate Namibia - Create Session Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Create STEM Session Plan</h1>
+            <!-- Status element doesn't rely on color alone (Requirement AR-02) -->
+            <div id="connection-badge" class="badge online">🌐 System Status: Online (Ready to Sync)</div>
+        </header>
+
+        <form id="session-form">
+            <label for="title">Plan Title *</label>
+            <input type="text" id="title" required placeholder="e.g., Solar Oven Experiment">
+
+            <label for="topic">STEM Topic *</label>
+            <select id="topic" required>
+                <option value="Science">Science</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Technology">Technology</option>
+            </select>
+
+            <label for="description">Activity Steps & Description *</label>
+            <textarea id="description" rows="4" required></textarea>
+
+            <label for="notes">Inclusion & Safety Prompts</label>
+            <textarea id="notes" rows="2" placeholder="How to assist learners with limited materials..."></textarea>
+
+            <button type="submit" id="submit-btn">Save & Sync Session</button>
+        </form>
+
+        <section id="feedback-panel" class="hidden" aria-live="polite"></section>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
